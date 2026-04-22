@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mike Castro - Embajador BYD Auto en el Sureste de México. Descubre los autos eléctricos BYD disponibles en Mérida, Yucatán. Contacto directo, asesoría personalizada." />
+  <meta name="keywords" content="BYD, autos eléctricos, Mérida, Yucatán, Sureste, Mike Castro, embajador BYD, vehículos eléctricos México" />
+  <meta property="og:title" content="Mike Castro | Embajador BYD Auto Sureste México" />
+  <meta property="og:description" content="Asesor especializado en movilidad eléctrica BYD en el Sureste de México. Encuentra tu próximo auto eléctrico." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_MX" />
+  <title>Mike Castro | Embajador BYD Auto – Sureste México</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --byd-red: #E60012;
+      --byd-dark: #0A0A0A;
+      --byd-carbon: #111111;
+      --byd-slate: #1A1A2E;
+      --byd-silver: #C0C0C8;
+      --byd-muted: #6B6B7B;
+      --byd-surface: #161622;
+      --byd-card: #1C1C2C;
+      --byd-border: rgba(255,255,255,0.08);
+      --byd-accent: #FF1A2E;
+      --font: 'Sora', sans-serif;
+      --mono: 'DM Mono', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      background: var(--byd-dark);
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ─────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 4rem;
+      background: rgba(10,10,10,0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--byd-border);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-mark {
+      width: 40px; height: 40px;
+      background: var(--byd-red);
+      border-radius: 4px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 13px; letter-spacing: 1px;
+      color: #fff;
+    }
+
+    .logo-text {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: #fff;
+      line-height: 1.2;
+    }
+
+    .logo-text span {
+      display: block;
+      font-size: 10px;
+      font-weight: 400;
+      color: var(--byd-silver);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--byd-silver);
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: #fff; }
+
+    .nav-cta {
+      background: var(--byd-red);
+      color: #fff !important;
+      padding: 8px 20px;
+      border-radius: 4px;
+      font-weight: 600 !important;
+      font-size: 13px !important;
+    }
+
+    .nav-cta:hover { background: var(--byd-accent) !important; }
+
+    /* ── HERO ────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 8rem 4rem 4rem;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 70% 50%, rgba(230,0,18,0.12) 0%, transparent 70%),
+        linear-gradient(135deg, #0A0A0A 0%, #1A1A2E 100%);
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 620px;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(230,0,18,0.15);
+      border: 1px solid rgba(230,0,18,0.3);
+      color: #FF6B7A;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--byd-red);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--byd-red);
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--byd-silver);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--byd-red);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 0.03em;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: var(--byd-accent);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: 0.03em;
+      border: 1px solid var(--byd-border);
+      transition: all 0.2s;
+    }
+
+    .btn-outline:hover {
+      border-color: rgba(255,255,255,0.3);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .hero-stats {
+      position: relative;
+      z-index: 2;
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      min-width: 220px;
+    }
+
+    .stat-card {
+      background: var(--byd-card);
+      border: 1px solid var(--byd-border);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+      font-family: var(--mono);
+      letter-spacing: -0.02em;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--byd-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 4px;
+    }
+
+    /* ── SECTION BASE ─────────────────── */
+    section {
+      padding: 6rem 4rem;
+    }
+
+    .section-tag {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--byd-red);
+      margin-bottom: 1rem;
+      font-family: var(--mono);
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .section-sub {
+      color: var(--byd-silver);
+      font-size: 1rem;
+      font-weight: 300;
+      max-width: 520px;
+      line-height: 1.7;
+      margin-bottom: 3rem;
+    }
+
+    /* ── SOBRE MÍ ─────────────────────── */
+    #sobre-mi {
+      background: var(--byd-surface);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-avatar {
+      position: relative;
+    }
+
+    .avatar-frame {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: var(--byd-card);
+      border-radius: 16px;
+      border: 1px solid var(--byd-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .avatar-initials {
+      font-size: 5rem;
+      font-weight: 700;
+      color: var(--byd-red);
+      font-family: var(--mono);
+      letter-spacing: -0.05em;
+      opacity: 0.9;
+    }
+
+    .avatar-badge {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      right: 1.5rem;
+      background: rgba(10,10,10,0.9);
+      border: 1px solid var(--byd-border);
+      border-radius: 10px;
+      padding: 1rem;
+    }
+
+    .badge-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .badge-sub {
+      font-size: 12px;
+      color: var(--byd-muted);
+      margin-top: 2px;
+    }
+
+    .badge-dot {
+      display: inline-block;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #22C55E;
+      margin-right: 6px;
+      animation: pulse 2s infinite;
+    }
+
+    .about-points {
+      list-style: none;
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .about-points li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15px;
+      color: var(--byd-silver);
+    }
+
+    .about-points li::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--byd-red);
+      margin-top: 8px;
+      flex-shrink: 0;
+    }
+
+    /* ── CATÁLOGO ─────────────────────── */
+    #catalogo { background: var(--byd-dark); }
+
+    .cars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .car-card {
+      background: var(--byd-card);
+      border: 1px solid var(--byd-border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .car-card:hover {
+      border-color: rgba(230,0,18,0.4);
+      transform: translateY(-4px);
+    }
+
+    .car-visual {
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .car-visual svg {
+      width: 200px;
+      opacity: 0.9;
+    }
+
+    .car-tag {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--byd-red);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 100px;
+    }
+
+    .car-info {
+      padding: 1.25rem 1.5rem 1.5rem;
+    }
+
+    .car-model {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
+
+    .car-type {
+      font-size: 12px;
+      color: var(--byd-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+
+    .car-specs {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .spec {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .spec-value {
+      font-size: 15px;
+      font-weight: 600;
+      font-family: var(--mono);
+      color: #fff;
+    }
+
+    .spec-label {
+      font-size: 10px;
+      color: var(--byd-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .car-price {
+      font-size: 13px;
+      color: var(--byd-silver);
+      border-top: 1px solid var(--byd-border);
+      padding-top: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .price-val {
+      font-weight: 700;
+      font-size: 15px;
+      color: #fff;
+      font-family: var(--mono);
+    }
+
+    .car-btn {
+      background: transparent;
+      border: 1px solid var(--byd-border);
+      color: var(--byd-silver);
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      cursor: pointer;
+      font-family: var(--font);
+      transition: all 0.2s;
+    }
+
+    .car-btn:hover {
+      border-color: var(--byd-red);
+      color: #fff;
+      background: rgba(230,0,18,0.1);
+    }
+
+    /* ── POR QUÉ EV ─────────────────────── */
+    #ventajas {
+      background: var(--byd-surface);
+    }
+
+    .ventajas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .ventaja-item {
+      background: var(--byd-card);
+      border: 1px solid var(--byd-border);
+      border-radius: 12px;
+      padding: 1.75rem;
+      transition: border-color 0.2s;
+    }
+
+    .ventaja-item:hover { border-color: rgba(230,0,18,0.3); }
+
+    .ventaja-icon {
+      width: 44px; height: 44px;
+      background: rgba(230,0,18,0.15);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+      margin-bottom: 1rem;
+    }
+
+    .ventaja-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .ventaja-desc {
+      font-size: 13px;
+      color: var(--byd-muted);
+      line-height: 1.6;
+    }
+
+    /* ── CONTACTO ────────────────────── */
+    #contacto {
+      background: var(--byd-dark);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .contact-info h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--byd-silver);
+      font-size: 14px;
+      padding: 1rem 1.25rem;
+      background: var(--byd-card);
+      border: 1px solid var(--byd-border);
+      border-radius: 10px;
+      transition: all 0.2s;
+    }
+
+    .contact-link:hover {
+      border-color: var(--byd-red);
+      color: #fff;
+    }
+
+    .contact-icon {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .social-section {
+      margin-top: 2rem;
+    }
+
+    .social-section h4 {
+      font-size: 13px;
+      color: var(--byd-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    .social-link {
+      width: 44px; height: 44px;
+      background: var(--byd-card);
+      border: 1px solid var(--byd-border);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .social-link:hover {
+      border-color: var(--byd-red);
+      background: rgba(230,0,18,0.1);
+    }
+
+    /* ── FORMULARIO ────────────────────── */
+    .contact-form {
+      background: var(--byd-card);
+      border: 1px solid var(--byd-border);
+      border-radius: 16px;
+      padding: 2rem;
+    }
+
+    .form-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    label {
+      display: block;
+      font-size: 12px;
+      color: var(--byd-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--byd-border);
+      color: #fff;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-family: var(--font);
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--byd-red);
+    }
+
+    select option {
+      background: var(--byd-card);
+    }
+
+    textarea { resize: vertical; min-height: 100px; }
+
+    input::placeholder, textarea::placeholder {
+      color: var(--byd-muted);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background: var(--byd-red);
+      color: #fff;
+      border: none;
+      padding: 14px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      font-family: var(--font);
+      cursor: pointer;
+      margin-top: 0.5rem;
+      transition: all 0.2s;
+      letter-spacing: 0.03em;
+    }
+
+    .btn-submit:hover {
+      background: var(--byd-accent);
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 2rem;
+      color: #22C55E;
+      font-size: 15px;
+    }
+
+    /* ── UBICACIÓN ────────────────────── */
+    .location-bar {
+      background: rgba(230,0,18,0.08);
+      border: 1px solid rgba(230,0,18,0.2);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 1.5rem;
+      font-size: 14px;
+      color: var(--byd-silver);
+    }
+
+    .location-icon {
+      font-size: 22px;
+    }
+
+    .location-bar strong {
+      color: #fff;
+      display: block;
+      font-size: 15px;
+    }
+
+    /* ── FOOTER ─────────────────────── */
+    footer {
+      background: var(--byd-carbon);
+      border-top: 1px solid var(--byd-border);
+      padding: 2rem 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-copy {
+      font-size: 13px;
+      color: var(--byd-muted);
+    }
+
+    .footer-legal {
+      font-size: 12px;
+      color: var(--byd-muted);
+      text-align: right;
+      line-height: 1.5;
+    }
+
+    /* ── MOBILE ─────────────────────── */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .hero { flex-direction: column; padding: 6rem 1.5rem 3rem; }
+      .hero-stats { flex-direction: row; margin-left: 0; margin-top: 2rem; width: 100%; }
+      .stat-card { flex: 1; }
+      section { padding: 4rem 1.5rem; }
+      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .form-row { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.5rem; }
+      .footer-legal { text-align: center; }
+    }
+
+    /* ── SCROLL ANIMATIONS ─────────────── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="logo-mark">BYD</div>
+    <div class="logo-text">
+      Mike Castro
+      <span>Embajador BYD · Sureste</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#sobre-mi">Sobre mí</a></li>
+    <li><a href="#catalogo">Catálogo</a></li>
+    <li><a href="#ventajas">¿Por qué eléctrico?</a></li>
+    <li><a href="#contacto" class="nav-cta">Contactar</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">Embajador BYD Auto · Sureste México</div>
+    <h1>La movilidad<br>eléctrica llega<br>al <em>Sureste.</em></h1>
+    <p class="hero-sub">
+      Soy Mike Castro, asesor especializado en vehículos eléctricos BYD con base en Mérida, Yucatán.
+      Te acompaño en cada paso hacia tu próximo auto.
+    </p>
+    <div class="hero-actions">
+      <a href="#catalogo" class="btn-primary">Ver catálogo</a>
+      <a href="#contacto" class="btn-outline">Agendar cita</a>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat-card">
+      <div class="stat-number">+3</div>
+      <div class="stat-label">Años con BYD México</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">5</div>
+      <div class="stat-label">Modelos disponibles</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">100%</div>
+      <div class="stat-label">Eléctrico</div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE MÍ -->
+<section id="sobre-mi">
+  <div class="about-grid">
+    <div class="about-avatar fade-up">
+      <div class="avatar-frame">
+        <div class="avatar-initials">MC</div>
+        <div class="avatar-badge">
+          <div class="badge-title"><span class="badge-dot"></span>Disponible para asesoría</div>
+          <div class="badge-sub">Mérida, Yucatán · Sureste México</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fade-up">
+      <div class="section-tag">Sobre mí</div>
+      <h2 class="section-title">Mike Castro<br>Embajador BYD Auto</h2>
+      <p class="section-sub">
+        Profesional en ventas automotrices con más de 10 años de experiencia, casi 3 años especializado
+        en movilidad eléctrica BYD desde su llegada a México. Mi misión: acercar la tecnología eléctrica
+        de vanguardia al Sureste del país.
+      </p>
+      <ul class="about-points">
+        <li>Asesor certificado BYD Auto México con base en Mérida, Yucatán</li>
+        <li>Especialista en financiamiento y beneficios fiscales para vehículos eléctricos</li>
+        <li>Atención personalizada para clientes particulares, flotillas y empresas</li>
+        <li>Cobertura en todo el Sureste: Yucatán, Campeche, Quintana Roo, Tabasco y Chiapas</li>
+        <li>Seguimiento post-venta y acompañamiento en toda la experiencia eléctrica</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CATÁLOGO -->
+<section id="catalogo">
+  <div class="fade-up">
+    <div class="section-tag">Catálogo 2024–2025</div>
+    <h2 class="section-title">Encuentra tu BYD</h2>
+    <p class="section-sub">Modelos disponibles en México. Consulta disponibilidad y precios actualizados directamente conmigo.</p>
+  </div>
+
+  <div class="cars-grid fade-up">
+
+    <!-- Atto 3 -->
+    <div class="car-card">
+      <div class="car-visual" style="background: linear-gradient(135deg, #1A1A2E, #0D1B3E);">
+        <svg viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="55" cy="68" rx="14" ry="9" fill="#222" stroke="#555" stroke-width="1.5"/>
+          <ellipse cx="55" cy="68" rx="7" ry="4.5" fill="#333"/>
+          <ellipse cx="148" cy="68" rx="14" ry="9" fill="#222" stroke="#555" stroke-width="1.5"/>
+          <ellipse cx="148" cy="68" rx="7" ry="4.5" fill="#333"/>
+          <path d="M20 60 L30 35 Q50 20 80 18 L130 18 Q158 20 172 38 L183 60 Z" fill="#2A3A5C" stroke="#3A5A8C" stroke-width="1"/>
+          <path d="M55 35 L70 22 L132 22 L148 38 L55 38 Z" fill="#1E3A6A" stroke="#2A5A9C" stroke-width="0.8" opacity="0.8"/>
+          <line x1="101" y1="22" x2="101" y2="38" stroke="#2A5A9C" stroke-width="0.8"/>
+          <rect x="18" y="56" width="20" height="4" rx="2" fill="#E60012" opacity="0.9"/>
+          <rect x="163" y="56" width="20" height="4" rx="2" fill="#FF6B6B" opacity="0.9"/>
+        </svg>
+        <div class="car-tag">SUV</div>
+      </div>
+      <div class="car-info">
+        <div class="car-model">BYD Atto 3</div>
+        <div class="car-type">SUV eléctrico · Batería BYD Blade</div>
+        <div class="car-specs">
+          <div class="spec"><span class="spec-value">520 km</span><span class="spec-label">Autonomía</span></div>
+          <div class="spec"><span class="spec-value">204 hp</span><span class="spec-label">Potencia</span></div>
+          <div class="spec"><span class="spec-value">7.3 s</span><span class="spec-label">0–100</span></div>
+        </div>
+        <div class="car-price">
+          <span>Precio: <span class="price-val">Consultar</span></span>
+          <button class="car-btn" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Más info</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dolphin -->
+    <div class="car-card">
+      <div class="car-visual" style="background: linear-gradient(135deg, #1A2E1A, #0D2E1A);">
+        <svg viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="55" cy="68" rx="14" ry="9" fill="#222" stroke="#555" stroke-width="1.5"/>
+          <ellipse cx="55" cy="68" rx="7" ry="4.5" fill="#333"/>
+          <ellipse cx="148" cy="68" rx="14" ry="9" fill="#222" stroke="#555" stroke-width="1.5"/>
+          <ellipse cx="148" cy="68" rx="7" ry="4.5" fill="#333"/>
+          <path d="M25 60 L38 42 Q55 28 82 26 L122 26 Q148 28 162 44 L175 60 Z" fill="#1A3A2A" stroke="#2A6A4A" stroke-width="1"/>
+          <path d="M62 40 L75 28 L128 28 L142 42 L62 42 Z" fill="#154A30" stroke="#2A8A5A" stroke-width="0.8" opacity="0.8"/>
+          <line x1="101" y1="28" x2="101" y2="42" stroke="#2A8A5A" stroke-width="0.8"/>
+          <rect x="23" y="56" width="18" height="4" rx="2" fill="#E60012" opacity="0.9"/>
+          <rect x="159" y="56" width="18" height="4" rx="2" fill="#FF6B6B" opacity="0.9"/>
+        </svg>
+        <div class="car-tag">Compacto</div>
+      </div>
+      <div class="car-info">
+        <div class="car-model">BYD Dolphin</div>
+        <div class="car-type">Hatchback eléctrico · Urbano</div>
+        <div class="car-specs">
+          <div class="spec"><span class="spec-value">427 km</span><span class="spec-label">Autonomía</span></div>
+          <div class="spec"><span class="spec-value">177 hp</span><span class="spec-label">Potencia</span></div>
+          <div class="spec"><span class="spec-value">7.0 s</span><span class="spec-label">0–100</span></div>
+        </div>
+        <div class="car-price">
+          <span>Precio: <span class="price-val">Consultar</span></span>
+          <button class="car-btn" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Más info</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seal -->
+    <div class="car-card">
+      <div class="car-visual" style="background: linear-gradient(135deg, #2E1A1A, #3A0D0D);">
+        <svg viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="52" cy="68" rx="14" ry="9" fill="#222" stroke="#555" stroke-width="1.5"/>
+          <ellipse cx="52" cy="68" rx="7" ry="4.5" fill="#333"/>
+          <ellipse cx="148" cy="68" rx="14" ry="9" fill="#222" stroke="#555" stroke-width="1.5"/>
+          <ellipse cx="148" cy="68" rx="7" ry="4.5" fill="#333"/>
+          <path d="M22 62 L36 40 Q55 24 85 22 L120 22 Q150 24 165 42 L178 62 Z" fill="#3A1A1A" stroke="#6A2A2A" stroke-width="1"/>
+          <path d="M60 38 L74 24 L130 24 L144 40 L60 40 Z" fill="#4A1515" stroke="#8A3030" stroke-width="0.8" opacity="0.8"/>
+          <line x1="100" y1="24" x2="100" y2="40" stroke="#8A3030" stroke-width="0.8"/>
+          <rect x="20" y="58" width="20" height="4" rx="2" fill="#E60012" opacity="0.9"/>
+          <rect x="160" y="58" width="20" height="4" rx="2" fill="#FF6B6B" opacity="0.9"/>
+        </svg>
+        <div class="car-tag" style="background:#fff;color:#E60012;">Bestseller</div>
+      </div>
+      <div class="car-info">
+        <div class="car-model">BYD Seal</div>
+        <div class="car-type">Sedán performance · Tracción trasera / AWD</div>
+        <div class="car-specs">
+          <div class="spec"><span class="spec-value">570 km</span><span class="spec-label">Autonomía</span></div>
+          <div class="spec"><span class="spec-value">523 hp</span><span class="spec-label">Potencia AWD</span></div>
+          <div class="spec"><span class="spec-value">3.8 s</span><span class="spec-label">0–100</span></div>
+        </div>
+        <div class="car-price">
+          <span>Precio: <span class="price-val">Consultar</span></span>
+          <button class="car-btn" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Más info</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Han -->
+    <div class="car-card">
+      <div class="car-visual" style="background: linear-gradient(135deg, #1A1A1A, #2A2A2A);">
+        <svg viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="50" cy="68" rx="14" ry="9" fill="#222" stroke="#555" stroke-width="1.5"/>
+          <ellipse cx="50" cy="68" rx="7" ry="4.5" fill="#333"/>
+          <ellipse cx="150" cy="68" rx="14" ry="9" fill="#222" stroke="#555" stroke-width="1.5"/>
+          <ellipse cx="150" cy="68" rx="7" ry="4.5" fill="#333"/>
+          <path d="M18 62 L32 36 Q50 18 85 16 L118 16 Q155 18 168 38 L182 62 Z" fill="#282828" stroke="#484848" stroke-width="1"/>
+          <path d="M58 32 L72 18 L132 18 L148 34 L58 34 Z" fill="#1A1A1A" stroke="#505050" stroke-width="0.8" opacity="0.9"/>
+          <line x1="100" y1="18" x2="100" y2="34" stroke="#505050" stroke-width="0.8"/>
+          <rect x="16" y="58" width="22" height="4" rx="2" fill="#E60012" opacity="0.9"/>
+          <rect x="162" y="58" width="22" height="4" rx="2" fill="#FF6B6B" opacity="0.9"/>
+        </svg>
+        <div class="car-tag">Luxury</div>
+      </div>
+      <div class="car-info">
+        <div class="car-model">BYD Han</div>
+        <div class="car-type">Sedán premium · Gran turismo eléctrico</div>
+        <div class="car-specs">
+          <div class="spec"><span class="spec-value">610 km</span><span class="spec-label">Autonomía</span></div>
+          <div class="spec"><span class="spec-value">517 hp</span><span class="spec-label">Potencia</span></div>
+          <div class="spec"><span class="spec-value">3.9 s</span><span class="spec-label">0–100</span></div>
+        </div>
+        <div class="car-price">
+          <span>Precio: <span class="price-val">Consultar</span></span>
+          <button class="car-btn" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Más info</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tang -->
+    <div class="car-card">
+      <div class="car-visual" style="background: linear-gradient(135deg, #1A1A2E, #2E1A3A);">
+        <svg viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="48" cy="70" rx="15" ry="9" fill="#222" stroke="#555" stroke-width="1.5"/>
+          <ellipse cx="48" cy="70" rx="7" ry="4.5" fill="#333"/>
+          <ellipse cx="152" cy="70" rx="15" ry="9" fill="#222" stroke="#555" stroke-width="1.5"/>
+          <ellipse cx="152" cy="70" rx="7" ry="4.5" fill="#333"/>
+          <path d="M15 62 L28 35 Q46 18 82 16 L122 16 Q158 18 172 38 L185 62 Z" fill="#2A1A3A" stroke="#4A2A6A" stroke-width="1"/>
+          <path d="M54 32 L68 18 L136 18 L150 34 L54 34 Z" fill="#1E1428" stroke="#5A3A8A" stroke-width="0.8" opacity="0.8"/>
+          <line x1="100" y1="18" x2="100" y2="34" stroke="#5A3A8A" stroke-width="0.8"/>
+          <rect x="13" y="58" width="20" height="4" rx="2" fill="#E60012" opacity="0.9"/>
+          <rect x="167" y="58" width="20" height="4" rx="2" fill="#FF6B6B" opacity="0.9"/>
+        </svg>
+        <div class="car-tag">SUV 7 plazas</div>
+      </div>
+      <div class="car-info">
+        <div class="car-model">BYD Tang</div>
+        <div class="car-type">SUV premium · 7 pasajeros · AWD</div>
+        <div class="car-specs">
+          <div class="spec"><span class="spec-value">500 km</span><span class="spec-label">Autonomía</span></div>
+          <div class="spec"><span class="spec-value">517 hp</span><span class="spec-label">Potencia</span></div>
+          <div class="spec"><span class="spec-value">4.4 s</span><span class="spec-label">0–100</span></div>
+        </div>
+        <div class="car-price">
+          <span>Precio: <span class="price-val">Consultar</span></span>
+          <button class="car-btn" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Más info</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shark -->
+    <div class="car-card">
+      <div class="car-visual" style="background: linear-gradient(135deg, #1E2A1A, #2A3A1A);">
+        <svg viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="46" cy="68" rx="15" ry="10" fill="#222" stroke="#555" stroke-width="1.5"/>
+          <ellipse cx="46" cy="68" rx="7" ry="5" fill="#333"/>
+          <ellipse cx="154" cy="68" rx="15" ry="10" fill="#222" stroke="#555" stroke-width="1.5"/>
+          <ellipse cx="154" cy="68" rx="7" ry="5" fill="#333"/>
+          <path d="M14 60 L26 38 Q40 22 70 20 L100 20 L100 34 L60 34 L55 40 L20 60 Z" fill="#2A3A1A" stroke="#4A6A2A" stroke-width="1"/>
+          <path d="M100 20 L136 20 Q162 22 175 38 L186 60 L145 60 L140 50 L100 50 Z" fill="#2A3A1A" stroke="#4A6A2A" stroke-width="1"/>
+          <rect x="100" y="20" width="2" height="14" fill="#4A6A2A"/>
+          <rect x="12" y="56" width="20" height="4" rx="2" fill="#E60012" opacity="0.9"/>
+          <rect x="168" y="56" width="20" height="4" rx="2" fill="#FF6B6B" opacity="0.9"/>
+        </svg>
+        <div class="car-tag" style="background: #22C55E; color: #fff;">Pickup PHEV</div>
+      </div>
+      <div class="car-info">
+        <div class="car-model">BYD Shark</div>
+        <div class="car-type">Pickup híbrida enchufable · AWD · 4x4</div>
+        <div class="car-specs">
+          <div class="spec"><span class="spec-value">100 km</span><span class="spec-label">Modo EV</span></div>
+          <div class="spec"><span class="spec-value">430 hp</span><span class="spec-label">Potencia</span></div>
+          <div class="spec"><span class="spec-value">4.9 s</span><span class="spec-label">0–100</span></div>
+        </div>
+        <div class="car-price">
+          <span>Precio: <span class="price-val">Consultar</span></span>
+          <button class="car-btn" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Más info</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- VENTAJAS -->
+<section id="ventajas">
+  <div class="fade-up">
+    <div class="section-tag">¿Por qué eléctrico?</div>
+    <h2 class="section-title">Ventajas de moverse<br>con BYD</h2>
+  </div>
+
+  <div class="ventajas-grid fade-up">
+    <div class="ventaja-item">
+      <div class="ventaja-icon">⚡</div>
+      <div class="ventaja-title">Ahorro en combustible</div>
+      <div class="ventaja-desc">Carga por fracción del costo de gasolina. En el Sureste el sol y la electricidad son abundantes.</div>
+    </div>
+    <div class="ventaja-item">
+      <div class="ventaja-icon">🔋</div>
+      <div class="ventaja-title">Batería BYD Blade</div>
+      <div class="ventaja-desc">Tecnología propia sin cobalto. Mayor seguridad, mayor durabilidad y mejor desempeño térmico.</div>
+    </div>
+    <div class="ventaja-item">
+      <div class="ventaja-icon">📋</div>
+      <div class="ventaja-title">Deducción fiscal 86%</div>
+      <div class="ventaja-desc">Plan México permite deducción inmediata del 86% en vehículos eléctricos. Ideal para empresas y flotillas.</div>
+    </div>
+    <div class="ventaja-item">
+      <div class="ventaja-icon">🔧</div>
+      <div class="ventaja-title">Menor mantenimiento</div>
+      <div class="ventaja-desc">Sin cambios de aceite ni filtros. Menos piezas en movimiento = menos gastos de taller.</div>
+    </div>
+    <div class="ventaja-item">
+      <div class="ventaja-icon">🌿</div>
+      <div class="ventaja-title">Cero emisiones locales</div>
+      <div class="ventaja-desc">Contribuye a la calidad del aire en Mérida y el Sureste. Circulación sin restricciones.</div>
+    </div>
+    <div class="ventaja-item">
+      <div class="ventaja-icon">💳</div>
+      <div class="ventaja-title">Financiamiento accesible</div>
+      <div class="ventaja-desc">Planes de crédito y leasing adaptados a particulares, empresas y flotillas corporativas.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="contact-grid">
+    <div class="fade-up">
+      <div class="section-tag">Contacto</div>
+      <h2 class="section-title">Hablemos de<br>tu próximo BYD</h2>
+      <p class="section-sub">Asesoría sin compromiso. Resuelvo todas tus dudas sobre modelos, financiamiento y beneficios fiscales.</p>
+
+      <div class="contact-links">
+        <a href="mailto:miguel.castro@bydmerida.mx" class="contact-link">
+          <div class="contact-icon" style="background: rgba(230,0,18,0.15);">✉️</div>
+          <div>
+            <div style="font-weight:600; color:#fff; font-size:14px;">Correo electrónico</div>
+            <div style="font-size:12px; color: var(--byd-muted); margin-top:2px;">miguel.castro@bydmerida.mx</div>
+          </div>
+        </a>
+        <a href="https://www.instagram.com/mike.bydmx" target="_blank" rel="noopener" class="contact-link">
+          <div class="contact-icon" style="background: rgba(130,50,150,0.2);">📸</div>
+          <div>
+            <div style="font-weight:600; color:#fff; font-size:14px;">Instagram</div>
+            <div style="font-size:12px; color: var(--byd-muted); margin-top:2px;">@mike.bydmx</div>
+          </div>
+        </a>
+        <a href="https://www.instagram.com/mike.bydmx" target="_blank" rel="noopener" class="contact-link">
+          <div class="contact-icon" style="background: rgba(24,119,242,0.2);">👤</div>
+          <div>
+            <div style="font-weight:600; color:#fff; font-size:14px;">Facebook</div>
+            <div style="font-size:12px; color: var(--byd-muted); margin-top:2px;">Mike Castro BYD</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="location-bar">
+        <span class="location-icon">📍</span>
+        <div>
+          <strong>Mérida, Yucatán · Sureste México</strong>
+          Atención en Yucatán, Campeche, Q. Roo, Tabasco y Chiapas
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form fade-up">
+      <div class="form-title">Solicitar información</div>
+      <div id="form-container">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" placeholder="Tu nombre" />
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" placeholder="+52 999..." />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" placeholder="tu@correo.com" />
+        </div>
+        <div class="form-group">
+          <label for="modelo">Modelo de interés</label>
+          <select id="modelo">
+            <option value="">Selecciona un modelo</option>
+            <option>BYD Atto 3 – SUV</option>
+            <option>BYD Dolphin – Compacto</option>
+            <option>BYD Seal – Sedán performance</option>
+            <option>BYD Han – Premium</option>
+            <option>BYD Tang – SUV 7 plazas</option>
+            <option>BYD Shark – Pickup PHEV</option>
+            <option>No he decidido – quiero asesoría</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje (opcional)</label>
+          <textarea id="mensaje" placeholder="Cuéntame en qué te puedo ayudar..."></textarea>
+        </div>
+        <button class="btn-submit" onclick="handleSubmit()">Enviar solicitud →</button>
+      </div>
+      <div class="form-success" id="form-success">
+        <div style="font-size: 2rem; margin-bottom: 1rem;">✅</div>
+        <div style="font-weight: 700; font-size: 18px; color: #fff; margin-bottom: 8px;">¡Mensaje enviado!</div>
+        <div style="color: var(--byd-muted); font-size: 14px;">Te contactaré a la brevedad. ¡Gracias por tu interés en BYD!</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="logo-text" style="font-size: 14px; margin-bottom: 4px;">Mike Castro · Embajador BYD Auto Sureste</div>
+    <div class="footer-copy">Mérida, Yucatán, México · 2025</div>
+  </div>
+  <div class="footer-legal">
+    Sitio independiente de asesoría.<br>
+    Consulta términos oficiales en bydauto.com.mx
+  </div>
+</footer>
+
+<script>
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Form submit (Formspree compatible — update endpoint when ready)
+  function handleSubmit() {
+    const nombre = document.getElementById('nombre').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const modelo = document.getElementById('modelo').value;
+
+    if (!nombre || !email) {
+      alert('Por favor completa nombre y correo electrónico.');
+      return;
+    }
+
+    // Formspree endpoint — reemplaza con tu URL real después de registrarte
+    // fetch('https://formspree.io/f/TU_ID', { method: 'POST', body: new FormData(form) })
+
+    // Simulación de envío exitoso
+    document.getElementById('form-container').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+
+    // WhatsApp fallback
+    const tel = document.getElementById('telefono').value.trim();
+    const msg = document.getElementById('mensaje').value.trim();
+    const waText = encodeURIComponent(
+      `Hola Mike, me interesa el ${modelo || 'catálogo BYD'}.\n` +
+      `Nombre: ${nombre}\n` +
+      (tel ? `Tel: ${tel}\n` : '') +
+      (msg ? `Mensaje: ${msg}` : '')
+    );
+    setTimeout(() => {
+      if (confirm('¿Deseas también enviar tu consulta por WhatsApp para atención más rápida?')) {
+        window.open(`https://wa.me/15559434647?text=${waText}`, '_blank');
+      }
+    }, 800);
+  }
+</script>
+</body>
+</html>
